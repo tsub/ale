@@ -14,7 +14,7 @@ function! ale_linters#yaml#launguage_server#GetCommand(buffer) abort
 endfunction
 
 function! ale_linters#yaml#launguage_server#CompletionItemFilter(buffer, item) abort
-    execute echo a:item.label
+    execute echom a:item.label
 
     return a:item.label !~# '\v^__[a-z_]+__'
 endfunction
