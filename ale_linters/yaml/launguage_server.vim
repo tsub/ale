@@ -14,6 +14,7 @@ function! ale_linters#yaml#launguage_server#GetCommand(buffer) abort
 endfunction
 
 function! ale_linters#yaml#launguage_server#CompletionItemFilter(buffer, item) abort
+    execute echom 'hoge'
     execute echom a:item.label
 
     return a:item.label !~# '\v^__[a-z_]+__'
@@ -25,6 +26,6 @@ call ale#linter#Define('yaml', {
 \   'lsp_config_callback': ale#VarFunc('yaml_launguage_server_config'),
 \   'executable_callback': ale#VarFunc('yaml_launguage_server_executable'),
 \   'command_callback': 'ale_linters#yaml#launguage_server#GetCommand',
-\   'completion_filter': 'ale#completion#python#CompletionItemFilter',
+\   'completion_filter': 'ale_linters#yaml#launguage_server#CompletionItemFilter',
 \   'project_root_callback': 'ale_linters#yaml#launguage_server#GetProjectRoot',
 \})
