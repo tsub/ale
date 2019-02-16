@@ -68,6 +68,7 @@ let s:trigger_character_map = {
 \   'typescript': ['.', '''', '"'],
 \   'rust': ['.', '::'],
 \   'cpp': ['.', '::', '->'],
+\   'yaml': [':'],
 \}
 
 function! s:GetFiletypeValue(map, filetype) abort
