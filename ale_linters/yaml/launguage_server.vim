@@ -13,11 +13,18 @@ function! ale_linters#yaml#launguage_server#GetCommand(buffer) abort
     \   . ' --stdio'
 endfunction
 
+function! ale_linters#yaml#launguage_server#CompletionItemFilter(buffer, item) abort
+    execute echo a:item.label
+
+    return a:item.label !~# '\v^__[a-z_]+__'
+endfunction
+
 call ale#linter#Define('yaml', {
 \   'name': 'yaml-launguage-server',
 \   'lsp': 'stdio',
 \   'lsp_config_callback': ale#VarFunc('yaml_launguage_server_config'),
 \   'executable_callback': ale#VarFunc('yaml_launguage_server_executable'),
 \   'command_callback': 'ale_linters#yaml#launguage_server#GetCommand',
+\   'completion_filter': 'ale#completion#python#CompletionItemFilter',
 \   'project_root_callback': 'ale_linters#yaml#launguage_server#GetProjectRoot',
 \})
