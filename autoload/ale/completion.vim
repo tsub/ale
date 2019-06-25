@@ -385,7 +385,6 @@ function! ale#completion#NullFilter(buffer, item) abort
 endfunction
 
 function! ale#completion#ParseLSPCompletions(response) abort
-    echom a:response
     let l:buffer = bufnr('')
     let l:info = get(b:, 'ale_completion_info', {})
     let l:Filter = get(l:info, 'completion_filter', v:null)
