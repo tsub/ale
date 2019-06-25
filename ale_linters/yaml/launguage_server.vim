@@ -1,5 +1,5 @@
 call ale#Set('yaml_launguage_server_executable', 'yaml-language-server')
-call ale#Set('yaml_launguage_server_options', '')
+call ale#Set('yaml_launguage_server_options', '--stdio')
 call ale#Set('yaml_launguage_server_config', {})
 
 function! ale_linters#yaml#launguage_server#GetProjectRoot(buffer) abort
@@ -10,7 +10,6 @@ endfunction
 
 function! ale_linters#yaml#launguage_server#GetCommand(buffer) abort
     return '%e' . ale#Pad(ale#Var(a:buffer, 'yaml_launguage_server_options'))
-    \   . ' --stdio'
 endfunction
 
 function! ale_linters#yaml#launguage_server#CompletionItemFilter(buffer, item) abort
@@ -23,9 +22,9 @@ endfunction
 call ale#linter#Define('yaml', {
 \   'name': 'yaml-launguage-server',
 \   'lsp': 'stdio',
-\   'lsp_config_callback': ale#VarFunc('yaml_launguage_server_config'),
-\   'executable_callback': ale#VarFunc('yaml_launguage_server_executable'),
-\   'command_callback': 'ale_linters#yaml#launguage_server#GetCommand',
-\   'completion_filter': 'ale_linters#yaml#launguage_server#CompletionItemFilter',
-\   'project_root_callback': 'ale_linters#yaml#launguage_server#GetProjectRoot',
+\   'lsp_config': function('yaml_launguage_server_config'),
+\   'executable': function('yaml_launguage_server_executable'),
+\   'command': function('ale_linters#yaml#launguage_server#GetCommand'),
+\   'completion_filter': function('ale_linters#yaml#launguage_server#CompletionItemFilter'),
+\   'project_root': function('ale_linters#yaml#launguage_server#GetProjectRoot'),
 \})
