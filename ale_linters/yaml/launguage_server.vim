@@ -22,8 +22,8 @@ endfunction
 call ale#linter#Define('yaml', {
 \   'name': 'yaml-launguage-server',
 \   'lsp': 'stdio',
-\   'lsp_config': function('yaml_launguage_server_config'),
-\   'executable': function('yaml_launguage_server_executable'),
+\   'lsp_config': {b -> ale#Var(b, 'yaml_launguage_server_config')},
+\   'executable': {b -> ale#Var(b, 'yaml_launguage_server_executable')},
 \   'command': function('ale_linters#yaml#launguage_server#GetCommand'),
 \   'completion_filter': function('ale_linters#yaml#launguage_server#CompletionItemFilter'),
 \   'project_root': function('ale_linters#yaml#launguage_server#GetProjectRoot'),
