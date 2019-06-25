@@ -1,4 +1,4 @@
-call ale#Set('yaml_launguage_server_executable', '/home/tsub/.nodenv/versions/8.11.3/lib/node_modules/yaml-language-server/out/server/src/server.js')
+call ale#Set('yaml_launguage_server_executable', 'yaml-language-server')
 call ale#Set('yaml_launguage_server_options', '')
 call ale#Set('yaml_launguage_server_config', {})
 
