@@ -12,19 +12,11 @@ function! ale_linters#yaml#launguage_server#GetCommand(buffer) abort
     return '%e' . ale#Pad(ale#Var(a:buffer, 'yaml_launguage_server_options'))
 endfunction
 
-function! ale_linters#yaml#launguage_server#CompletionItemFilter(buffer, item) abort
-    execute echom 'hoge'
-    execute echom a:item.label
-
-    return a:item.label !~# '\v^__[a-z_]+__'
-endfunction
-
 call ale#linter#Define('yaml', {
 \   'name': 'yaml-launguage-server',
 \   'lsp': 'stdio',
 \   'lsp_config': {b -> ale#Var(b, 'yaml_launguage_server_config')},
 \   'executable': {b -> ale#Var(b, 'yaml_launguage_server_executable')},
 \   'command': function('ale_linters#yaml#launguage_server#GetCommand'),
-\   'completion_filter': function('ale_linters#yaml#launguage_server#CompletionItemFilter'),
 \   'project_root': function('ale_linters#yaml#launguage_server#GetProjectRoot'),
 \})
