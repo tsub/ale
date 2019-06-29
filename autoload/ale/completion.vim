@@ -68,7 +68,6 @@ let s:trigger_character_map = {
 \   'typescript': ['.', '''', '"'],
 \   'rust': ['.', '::'],
 \   'cpp': ['.', '::', '->'],
-\   'yaml': [':'],
 \}
 
 function! s:GetFiletypeValue(map, filetype) abort
@@ -528,6 +527,8 @@ function! ale#completion#HandleLSPResponse(conn_id, response) abort
     if !s:CompletionStillValid(get(a:response, 'id'))
         return
     endif
+
+    echom a:response
 
     call ale#completion#Show(
     \   ale#completion#ParseLSPCompletions(a:response),
