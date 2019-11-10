@@ -528,8 +528,6 @@ function! ale#completion#HandleLSPResponse(conn_id, response) abort
         return
     endif
 
-    echom a:response
-
     call ale#completion#Show(
     \   ale#completion#ParseLSPCompletions(a:response),
     \)
