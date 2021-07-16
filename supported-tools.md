@@ -133,6 +133,7 @@ formatting.
   * [dafny](https://rise4fun.com/Dafny) :floppy_disk:
 * Dart
   * [analysis_server](https://github.com/dart-lang/sdk/tree/master/pkg/analysis_server)
+  * [dart-format](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
   * [dartanalyzer](https://github.com/dart-lang/sdk/tree/master/pkg/analyzer_cli) :floppy_disk:
   * [dartfmt](https://github.com/dart-lang/sdk/tree/master/utils/dartfmt)
   * [language_server](https://github.com/natebosch/dart_language_server)
@@ -192,7 +193,7 @@ formatting.
   * [golangserver](https://github.com/sourcegraph/go-langserver) :warning:
   * [golint](https://godoc.org/github.com/golang/lint)
   * [gometalinter](https://github.com/alecthomas/gometalinter) :warning: :floppy_disk:
-  * [gopls](https://github.com/golang/go/wiki/gopls) :warning:
+  * [gopls](https://github.com/golang/go/wiki/gopls)
   * [gosimple](https://github.com/dominikh/go-tools/tree/master/cmd/gosimple) :warning: :floppy_disk:
   * [gotype](https://godoc.org/golang.org/x/tools/cmd/gotype) :warning: :floppy_disk:
   * [revive](https://github.com/mgechev/revive) :warning: :floppy_disk:
@@ -294,9 +295,11 @@ formatting.
 * LLVM
   * [llc](https://llvm.org/docs/CommandGuide/llc.html)
 * Lua
+  * [lua-format](https://github.com/Koihik/LuaFormatter)
   * [luac](https://www.lua.org/manual/5.1/luac.html)
   * [luacheck](https://github.com/mpeterv/luacheck)
   * [luafmt](https://github.com/trixnz/lua-fmt)
+  * [stylua](https://github.com/johnnymorganz/stylua)
 * Mail
   * [alex](https://github.com/wooorm/alex) :floppy_disk:
   * [languagetool](https://languagetool.org/) :floppy_disk:
@@ -309,6 +312,7 @@ formatting.
   * [languagetool](https://languagetool.org/) :floppy_disk:
   * [markdownlint](https://github.com/DavidAnson/markdownlint) :floppy_disk:
   * [mdl](https://github.com/mivok/markdownlint)
+  * [pandoc](https://pandoc.org)
   * [prettier](https://github.com/prettier/prettier)
   * [proselint](http://proselint.com/)
   * [redpen](http://redpen.cc/)
@@ -405,6 +409,7 @@ formatting.
   * [purescript-language-server](https://github.com/nwolverson/purescript-language-server)
   * [purty](https://gitlab.com/joneshf/purty)
 * Python
+  * [autoflake](https://github.com/myint/autoflake)
   * [autoimport](https://lyz-code.github.io/autoimport/)
   * [autopep8](https://github.com/hhatto/autopep8)
   * [bandit](https://github.com/PyCQA/bandit) :warning:
@@ -418,7 +423,7 @@ formatting.
   * [pyflakes](https://github.com/PyCQA/pyflakes)
   * [pylama](https://github.com/klen/pylama) :floppy_disk:
   * [pylint](https://www.pylint.org/) :floppy_disk:
-  * [pyls](https://github.com/palantir/python-language-server) :warning:
+  * [pylsp](https://github.com/python-lsp/python-lsp-server) :warning:
   * [pyre](https://github.com/facebook/pyre-check) :warning:
   * [pyright](https://github.com/microsoft/pyright)
   * [reorder-python-imports](https://github.com/asottile/reorder_python_imports)
@@ -556,6 +561,7 @@ formatting.
   * [verilator](http://www.veripool.org/projects/verilator/wiki/Intro)
   * [vlog](https://www.mentor.com/products/fv/questa/)
   * [xvlog](https://www.xilinx.com/products/design-tools/vivado.html)
+  * [yosys](http://www.clifford.at/yosys/)
 * VHDL
   * [ghdl](https://github.com/ghdl/ghdl)
   * [vcom](https://www.mentor.com/products/fv/questa/)
@@ -577,6 +583,7 @@ formatting.
 * XML
   * [xmllint](http://xmlsoft.org/xmllint.html)
 * YAML
+  * [circleci](https://circleci.com/docs/2.0/local-cli) :floppy_disk:
   * [prettier](https://github.com/prettier/prettier)
   * [spectral](https://github.com/stoplightio/spectral)
   * [swaglint](https://github.com/byCedric/swaglint)
